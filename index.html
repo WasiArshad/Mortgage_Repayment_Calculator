@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="left-card">
+          <div class="header">
+            <h1>Mortgage Calculator</h1>
+            <span><a id="clear" href="">Clear All</a></span>
+          </div>
+          <form action="/submit" method="POST">
+            <div class="form-group">
+              <label for="amount">Mortgage Amount</label>
+              <div class="input-wrapper">
+                <div class="currency-wrapper">
+                  <span class="currency-symbol">£</span>
+                </div>
+                <input type="text" id="amount" name="amount" required />
+              </div>
+              <div id="amount-error"></div>
+            </div>
+            <div class="flex-input">
+              <div class="form-group">
+                <label for="term">Mortgage Term</label>
+                <div class="input-wrapper input_wrapper">
+                  <input type="text" id="term" name="term" required />
+                  <div class="suffix-wrapper">
+                    <span class="suffix">years</span>
+                  </div>
+                </div>
+                <div id="year-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="interest">Interest Rate</label>
+                <div class="input-wrapper percentage_wrapper">
+                  <input type="text" id="interest" name="interest" required />
+                  <div class="suffix-wrapper percent-wrapper">
+                    <span class="suffix suffix_p">%</span>
+                  </div>
+                </div>
+                <div id="percent-error"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="type">Mortgage Type</label>
+              <div>
+                <div class="input-group">
+                  <input
+                    type="radio"
+                    id="repaymentOption"
+                    name="mortgageType"
+                    class="radio-button"
+                    required
+                  />
+                  <input type="text" name="input1" required readonly />
+                </div>
+                <label class="repay" for="repayment">Repayment</label>
+              </div>
+              <div>
+                <div class="input-group">
+                  <input
+                    type="radio"
+                    id="interestOnlyOption"
+                    name="mortgageType"
+                    class="radio-button"
+                    required
+                  />
+                  <input type="text" name="input2" required readonly />
+                </div>
+                <label class="cal-interest" for="interest-only"
+                  >Interest Only</label
+                >
+              </div>
+              <div id="calculation-error"></div>
+            </div>
+            <div id="mortgageForm">
+              <div class="btn-img" onclick="submitForm()">
+                <img src="assets/images/icon-calculator.svg" alt="" />
+                <span class="btn">Calculate Repayments</span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="right-card">
+          <div class="right-wrapper">
+            <img src="assets/images/illustration-empty.svg" alt="" />
+            <h1>Results shown here</h1>
+            <p>
+              Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.
+            </p>
+          </div>
+          <div class="complete-section hide">
+            <h3>Your results</h3>
+            <p class="para">
+              Your results are shown below based on the information you
+              provided. To adjust the results, edit the form and click
+              “calculate repayments” again.
+            </p>
+            <div class="box-section">
+              <div class="upper">
+                <p class="when_interest"></p>
+                <span id="complete-amt"></span>
+              </div>
+              <div class="down">
+                <p>Total you'll repay over the term</p>
+                <span id="complete-amt-1"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+</html>

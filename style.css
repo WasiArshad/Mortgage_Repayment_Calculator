@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: hsl(202, 86%, 94%);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    display: flex;
+    align-items: center;
+    width: 1002px;
+    background-color: hsla(0, 0%, 100%, 0.751);
+    box-shadow: 0 0 50px rgba(39, 36, 48, 0.2);
+    border-radius: 25px;
+}
+.left-card {
+    width: 50.5%;
+    padding: 30px 40px 25px 40px;
+    height: 605px;
+    transition: height 0.3s ease
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 5px 40px;
+}
+.header h1 {
+    font-size: 23px;
+    color: hsl(201, 56%, 16%);
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.header span a {
+    font-size: 16.5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(200, 24%, 40%);
+    cursor: pointer;
+}
+.form-group {
+    margin-bottom: 23px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 13px;
+}
+label[for="amount"] {
+    color: hsla(200, 24%, 40%, 0.869);
+    font-weight: 500;
+    font-size: 16px;
+}
+label[for="term"] {
+    color: hsla(200, 24%, 40%, 0.869);
+    font-weight: 500;
+    font-size: 16px;
+}
+label[for="interest"] {
+    color: hsla(200, 24%, 40%, 0.869);
+    font-weight: 500;
+    font-size: 16px;
+}
+label[for="type"] {
+    color: hsla(200, 24%, 40%, 0.869);
+    font-weight: 500;
+    font-size: 16px;
+}
+.input-wrapper {
+    position: relative;
+}
+.input-wrapper input {
+    height: 35px;
+    font-size: 16px;
+    border: 1px solid hsl(200, 24%, 40%);
+    border-radius: 5px;
+}
+.input-wrapper input:hover {
+    border: 1.5px solid hsl(200, 24%, 40%);
+}
+#amount {
+    padding-left: 60px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+.currency-symbol {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: hsla(201, 56%, 16%, 0.7);
+    font-weight: 700;
+    left: 15px;
+}
+.currency-wrapper {
+    position: absolute;
+    width: 45px;
+    height: 46.5px;
+    top: 4%;
+    left: 1.5px;
+    border-radius: 4px 0 0 4px;
+    background-color: hsl(202, 86%, 94%);
+}
+.suffix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    font-weight: 700;
+    color: hsla(201, 56%, 16%, 0.7);
+    right: 12px;
+    background-color: hsl(202, 86%, 94%);
+}
+.form-group {
+    position: relative;
+}
+.suffix-wrapper {
+    position: absolute;
+    width: 74px;
+    height: 46.2px;
+    top: 4%;
+    left: 63.8%;
+    background-color: hsl(202, 86%, 94%);
+    border-radius: 0 4px 4px 0;
+}
+.percent-wrapper {
+    position: absolute;
+    width: 50px;
+    height: 46.5px;
+    top: 3%;
+    left: 75.3%;
+    border-radius: 0 5px 5px 0;
+}
+.percent-wrapper span {
+    right: 17px;
+    font-weight: 800;
+}
+.flex-input {
+    display: flex;
+    /* gap: 1.3rem; */
+    justify-content: space-between;
+}
+.flex-input #term {
+    padding-right: 30px;
+    padding-left: 12px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+.flex-input #interest {
+    padding-right: 30px;
+    padding-left: 12px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+.input-group {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.input-group input[type="text"] {
+    width: 100%;
+    padding-left: 40px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid hsl(200, 24%, 40%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input-group input[type="text"]:hover {
+    border: 1.5px solid hsl(61, 70%, 52%);
+}
+.input-group .radio-button {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+.input-group input[type="radio"] {
+    margin: 0;
+    /* appearance: none; */
+    width: 18px;
+    height: 18px;
+    border: 2px solid hsla(61, 70%, 52%, 0.609);
+    border-radius: 50%;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    /* position: relative; */
+}
+input[type="radio"]:checked::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(61, 70%, 52%);
+}
+input[type="radio"].submitted {
+    appearance: none;
+}
+.repay {
+    position: absolute;
+    top: 46.5px;
+    left: 55px;
+    color: hsla(201, 56%, 16%, 0.786);
+    font-weight: 700;
+    font-size: 18px;
+}
+.cal-interest {
+    position: absolute;
+    top: 108.5px;
+    left: 55px;
+    color: hsla(201, 56%, 16%, 0.786);
+    font-weight: 700;
+    font-size: 18px;
+}
+.btn-img {
+    background-color: hsl(61, 70%, 52%);
+    display: flex;
+    align-items: center;
+    width: 325px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+}
+.btn-img img {
+    width: 24px;
+    position: relative;
+    left: 14%;
+}
+.btn {
+    border: none;
+    font-size: 18px;
+    padding: 18px;
+    color: hsla(201, 56%, 16%, 0.886);
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    cursor: pointer;
+    position: relative;
+    left: 12%;
+}
+.btn-img:hover {
+    background-color: hsla(61, 70%, 52%, 0.614);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+.right-card {
+    width: 49.5%;
+    background-color: hsl(202, 55%, 16%);
+    height: 605px;
+    padding: 35px;
+    display: flex;
+    border-radius: 0 25px 25px 80px;
+    transition: height 0.3s ease
+}
+.right-card img {
+    width: 195px;
+    margin-bottom: 18px;
+}
+.right-card h1 {
+    font-size: 24px;
+    color: hsl(0, 0%, 100%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    margin-block: 0px 18px;
+}
+.right-card p {
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsla(203, 41%, 72%, 0.923);
+    text-align: center;
+}
+.right-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.complete-section {
+    display: flex;
+    flex-direction: column;
+}
+.complete-section h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 23px;
+}
+.complete-section p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+}
+.complete-section .para {
+    margin-top: 25px;
+    text-align: left;
+}
+.box-section {
+    border-top: 4px solid hsl(61, 70%, 52%);
+    background-color: hsl(203, 53%, 12%);
+    box-shadow: 2px 2px 10px rgba(18, 47, 63, 0.2);
+    border-radius: 5px;
+    padding: 25px 30px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.box-section p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.box-section .upper span {
+    font-size: 55px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(61, 70%, 52%);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.upper {
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    height: 15vh;
+}
+.down span {
+    color: hsl(0, 0%, 100%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.hide {
+    display: none;
+}
+.error-amt {
+    background-color: hsl(4, 69%, 50%);
+    height: 50px;
+    top: 0.2%;
+    left: 0.2px;
+    width: 46px;
+}
+.error-amt2 {
+    border: 1px solid hsl(4, 69%, 50%);
+    border-radius: 6.2px;
+}
+.error-amt1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+#amount-error{
+    font-size: 12px;
+    color: hsl(4, 69%, 50%);
+    margin-top: 8px;
+    font-weight: 500;
+}
+.error-suf1 {
+    background-color: hsl(4, 69%, 50%);
+    height: 50px;
+    left: 64.8%;
+    top: 0%;
+}
+.error-suf {
+    border: 1px solid hsl(4, 69%, 50%);
+    border-radius: 6.2px;
+}
+.error-suf2 {
+    background-color: hsl(4, 69%, 50%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+#year-error {
+    font-size: 12px;
+    color: hsl(4, 69%, 50%);
+    margin-top: 8px;
+    font-weight: 500;
+}
+.error-sufP1 {
+    background-color: hsl(4, 69%, 50%);
+    height: 50px;
+    left: 76.7%;
+    top: 0%;
+}
+.error-sufP {
+    border: 1px solid hsl(4, 69%, 50%);
+    border-radius: 6.2px;
+}
+.error-sufP2 {
+    background-color: hsl(4, 69%, 50%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+#percent-error {
+    font-size: 12px;
+    color: hsl(4, 69%, 50%);
+    margin-top: 8px;
+    font-weight: 500;
+}
+#calculation-error {
+    font-size: 12px;
+    color: hsl(4, 69%, 50%);
+    margin-top: 8px;
+    font-weight: 500;
+}
+@media (min-width: 365px) and (max-width: 768px) {
+.container {
+    height: unset;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: unset;
+}
+.header {
+    flex-direction: column;
+    align-items: unset;
+    margin-block: 0px 25px;
+}
+.header h1 {
+    margin-bottom: 8px;
+}
+.left-card {
+    width: unset;
+    padding: 25px 20px;
+}
+.flex-input {
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.suffix-wrapper {
+    left: 77.1%;
+    border-radius: 0 3px 3px 0;
+}
+.percent-wrapper {
+    left: 84.5%;
+    border-radius: 0 3px 3px 0;
+}
+.btn {
+    font-size: 17px;
+    padding: 16px;
+}
+.right-card {
+    width: unset;
+    border-radius: unset;
+    padding: unset;
+    height: 385px;
+    margin-top: 78px;
+}
+.right-card img {
+    width: 155px;
+    margin-bottom: 12px;
+}
+.complete-section {
+    padding: 25px 20px;
+}
+.complete-section h3 {
+    font-size: 20px;
+}
+.complete-section .para {
+    margin-top: 20px;
+}
+.box-section {
+    padding: 15px;
+    margin-top: 20px;
+    gap: 1rem;
+}
+.box-section .upper span {
+    font-size: 27px;
+    font-weight: 600;
+}
+.upper {
+    height: 75px;
+}
+.down span {
+    font-size: 23px;
+    font-weight: 600;
+}
+}
