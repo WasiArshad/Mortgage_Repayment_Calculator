@@ -128,7 +128,7 @@ label[for="type"] {
     width: 74px;
     height: 46.2px;
     top: 4%;
-    left: 63.8%;
+    left: 62.8%;
     background-color: hsl(202, 86%, 94%);
     border-radius: 0 4px 4px 0;
 }
@@ -137,7 +137,7 @@ label[for="type"] {
     width: 50px;
     height: 46.5px;
     top: 3%;
-    left: 75.3%;
+    left: 75%;
     border-radius: 0 5px 5px 0;
 }
 .percent-wrapper span {
@@ -375,7 +375,7 @@ input:-webkit-autofill {
 .error-suf1 {
     background-color: hsl(4, 69%, 50%);
     height: 50px;
-    left: 64.8%;
+    left: 63.3%;
     top: 0%;
 }
 .error-suf {
@@ -396,7 +396,7 @@ input:-webkit-autofill {
 .error-sufP1 {
     background-color: hsl(4, 69%, 50%);
     height: 50px;
-    left: 76.7%;
+    left: 75.1%;
     top: 0%;
 }
 .error-sufP {

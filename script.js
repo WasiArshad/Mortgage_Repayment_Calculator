@@ -229,8 +229,7 @@ loanAmounT.addEventListener("input", function () {
 });
 loanTerM.addEventListener("input", function () {
   this.value = formatTerm(this.value);
-  flexInput.style.gap = "1rem";
-  suffixWrapper.style.left = "65%";
+  suffixWrapper.style.left = "64%";
   percentWrapper.style.left = "75.5%";
   if (window.innerWidth < 768) {
     suffixWrapper.style.left = "77.1%";
@@ -242,8 +241,7 @@ loanTerM.addEventListener("input", function () {
 
 loanInteresT.addEventListener("input", function () {
   this.value = formatInterest(this.value);
-  flexInput.style.gap = "1rem";
-  percentWrapper.style.left = "76.1%";
+  percentWrapper.style.left = "75.1%";
   suffixWrapper.style.left = "63.7%";
   if (window.innerWidth < 768) {
     percentWrapper.style.left = "84.5%";
