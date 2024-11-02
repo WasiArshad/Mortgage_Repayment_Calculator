@@ -146,7 +146,7 @@ label[for="type"] {
 }
 .flex-input {
     display: flex;
-    /* gap: 1.3rem; */
+    gap: 1.2rem;
     justify-content: space-between;
 }
 .flex-input #term {
